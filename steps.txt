@@ -1,0 +1,17 @@
+npx create-expo-app luaTaskList
+
+cd luaTaskList
+
+npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
+
+npx expo start --localhost --android
+
+Configurando o Router:
+    Abrir o package.json e alterar a chave main
+        "main": "expo-router/entry"
+    Abrir o app.json e vai incluir a linha:
+        "scheme": "luaTaskList"
+
+Criar uma pasta src 
+
+Dentro da pasta src criar uma pasta app
