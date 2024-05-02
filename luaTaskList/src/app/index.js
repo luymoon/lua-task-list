@@ -8,11 +8,18 @@ export default function Welcome() {
       <View style={styles.containerImage}>
         <Image source={require('../assests/avatar.jpg')} style={styles.logo} />
       </View>
-      <Text>Welcome</Text>
-      <Link href={"/home"}>
-        <Text>Acessar</Text>
-      </Link>
-      <StatusBar style="auto" />
+      <View style={styles.content}>
+        <Text style={styles.title}>
+          Lua Task List
+        </Text>
+        <Text style={styles.text}>
+          Monte sua lista de tarefas e não esqueça mais suas obrigações!
+        </Text>
+        <Link style={styles.button} href={"/home"}>
+          <Text style={styles.buttonText}>Acessar</Text>
+        </Link>
+      </View>
+      <StatusBar style="light" backgroundColor='#000' />
     </View>
   );
 }
@@ -33,4 +40,37 @@ const styles = StyleSheet.create({
     borderRadius: 115,
     resizeMode: 'cover',
   },
+  content: {
+    flex: 1,
+    backgroundColor: "#dadada",
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
+    paddingHorizontal: '5%',
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginTop: 28,
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  text: {
+    fontSize: 16,
+    color: 'gray',
+  },
+  button: {
+    position: 'absolute',
+    backgroundColor: '#000',
+    bottom: '15%',
+    alignSelf: 'center',
+    borderRadius: 50,
+    paddingVertical: 15,
+    width: '60%',
+    textAlign: 'center',
+  },
+  buttonText: {
+    fontSize: 20,
+    color: '#fff',
+    fontWeight: 'bold',
+  }
 });
