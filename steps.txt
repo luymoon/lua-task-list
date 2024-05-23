@@ -16,3 +16,5 @@ Configurando o Router:
 Criar uma pasta src 
 
 Dentro da pasta src criar uma pasta app
+
+npx expo install @react-native-async-storage/async-storage
